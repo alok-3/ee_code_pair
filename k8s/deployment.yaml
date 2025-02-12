@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: github-gists-api
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: github-gists-api
+  template:
+    metadata:
+      labels:
+        app: github-gists-api
+    spec:
+      containers:
+        - name: github-gists-api
+          image: github-gists-api:$IMAGE_TAG
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000

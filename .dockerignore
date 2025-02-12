@@ -1,0 +1,9 @@
+# Ignore unnecessary files and directories
+
+.git
+**pycache**
+\*.pyc
+.pytest_cache
+jenkins/
+k8s/
+Jenkinsfile

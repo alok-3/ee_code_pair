@@ -1,0 +1,5 @@
+# Pin to specific versions of dependencies
+# Install production dependencies
+flask
+requests
+pytest
